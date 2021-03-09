@@ -1,2 +1,2 @@
 # Fast-Sinkhorn-Filters
-Sample code for Fast Sinkhorn Filters - from CVPR 2021 paper.
+Sample code for Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps
