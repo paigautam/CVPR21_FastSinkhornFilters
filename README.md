@@ -4,3 +4,4 @@ This is a sample code for Fast Sinkhorn Filters - Using Matrix Scaling for Non-R
 
 
 
+![Alt text](Figures/Teaser_Sinkhorn.png?raw=true)
