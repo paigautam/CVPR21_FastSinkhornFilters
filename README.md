@@ -38,7 +38,7 @@ desired. Choose 'sparse' for fastest mode
 
 ## Comments
 
-- The script demo.m runs the Fast Sinkhorn Filter with 2 experiments
+The script demo.m runs the Fast Sinkhorn Filter with 2 experiments
 
   - A comparison to pointwise functional-map conversion, by converting a ground truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions necessary to establish a pointwise correspondence). 
 <img src="Figures/SinkvsNN.png" width="600" height="450">
