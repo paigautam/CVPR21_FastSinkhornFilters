@@ -22,6 +22,7 @@ S1 = MESH.compute_LaplacianBasis(S1, 100);
 S2 = MESH.compute_LaplacianBasis(S2, 100);
 
 disp('done ...');
+
 % load('tr_reg_004.mat'); S1.Gamma = D; D = [];
 % load('tr_reg_009.mat'); S2.Gamma = D; D = [];
 
