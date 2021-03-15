@@ -34,3 +34,5 @@ An options struct with the following
 desired. Choose 'sparse' for fastest mode
 %}
 ```
+
+## Comments
