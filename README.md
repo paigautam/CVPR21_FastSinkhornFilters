@@ -39,7 +39,7 @@ desired. Choose 'sparse' for fastest mode
 ## Comments
 
 - The script demo.m runs the sinkhorn filter with 2 experiments
-  - Comparing the pointwise functional map conversion performance: <img src="Figures/SinkvsNN.png" width="800" height="600">
+  - Comparing the pointwise functional map conversion performance: <img src="Figures/SinkvsNN.png" width="600" height="450">
   - Comparing the Sinkhornized versions of ICP and Zoomout <img src="Figures/ICP_ZM_errors.png" width="550" height="800">
  
 
