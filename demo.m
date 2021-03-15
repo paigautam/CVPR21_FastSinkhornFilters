@@ -4,7 +4,7 @@
 
 %}
 %%
-clc; close all; clear;
+clc; close all; clear all;
 addpath(genpath('utils/'));
 addpath('func_main/');
 mesh_dir = 'data/';
@@ -15,16 +15,9 @@ s2_name = 'Man1';
 
 %% Read the mesh and compute the LB basis
 disp('reading shapes ...');
-S1 = MESH.MESH_IO.read_shape([mesh_dir, s1_name]);
-S2 = MESH.MESH_IO.read_shape([mesh_dir, s2_name]);
-
-S1 = MESH.compute_LaplacianBasis(S1, 100);
-S2 = MESH.compute_LaplacianBasis(S2, 100);
-
+S1 = MESH.MESH_IO.read_shape([mesh_dir, s1_name]);S1 = MESH.compute_LaplacianBasis(S1, 100);
+S2 = MESH.MESH_IO.read_shape([mesh_dir, s2_name]);S2 = MESH.compute_LaplacianBasis(S2, 100);
 disp('done ...');
-
-% load('tr_reg_004.mat'); S1.Gamma = D; D = [];
-% load('tr_reg_009.mat'); S2.Gamma = D; D = [];
 
 %% Pointwise Map Conversion - Compare between Nearest Neighbor and Fast Sinkhorn Filter 
 
@@ -64,23 +57,19 @@ fs = 15;
 subplot(1,2,1);
 plot(numbasis,errs_nn,'LineWidth',2); hold on; 
 plot(numbasis,errs_sinkhorn,'LineWidth',2); hold off;
-xlabel('Spectral Basis Size','FontSize',fs); 
-ylabel('Mean GT Error','FontSize',fs); 
+xlabel('Spectral Basis Size','FontSize',fs); ylabel('Mean GT Error','FontSize',fs); 
 legend(' NN',' Sinkhorn','FontSize',fs); 
-axis([0 max(numbasis) 0 0.05]);
-axis vis3d; 
+axis([0 max(numbasis) 0 0.05]);axis vis3d; 
 title('Error','FontSize',fs); 
 
 
 subplot(1,2,2);
 plot(numbasis,time_nn,'LineWidth',2); hold on; 
 plot(numbasis,time_sinkhorn,'LineWidth',2); hold off;
-xlabel('Spectral Basis Size','FontSize',fs); 
-ylabel('Runtime (sec)','FontSize',fs); 
+xlabel('Spectral Basis Size','FontSize',fs); ylabel('Runtime (sec)','FontSize',fs); 
 legend(' NN',' Sinkhorn','FontSize',fs);
-axis([0 max(numbasis) 0 5]);
-title('Runtime','FontSize',fs); 
-axis vis3d; 
+axis([0 max(numbasis) 0 5]); axis vis3d; 
+title('Runtime','FontSize',fs);
 
 sgtitle('Pointwise Map Conversion','FontSize',20) ;
 
