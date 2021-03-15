@@ -37,6 +37,7 @@ desired. Choose 'sparse' for fastest mode
 
 ## Comments
 
-- The script eg1_cat_wolf.m shows how to use the above function (to reproduce the Fig.2 in our paper).
-- The script eg2_self_symmetry.m shows how to compute self-symmetric maps for human shapes.
+- The script demo.m runs the sinkhorn filter with 2 experiments
+  - this 
+
 
