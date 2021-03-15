@@ -11,9 +11,9 @@ This is a sample demo-code for Fast Sinkhorn Filters - Using Matrix Scaling for 
 %{
 ***Input***
 
-(1.) KSrc -- a N X K Matrix of Features/Aligned Basis/Embeddings on Source Shape with M Points and
+(1.) KSrc -- a M X K Matrix of Features/Aligned Basis/Embeddings on Source Shape with M Points and
 K Features
-(2.) KTar -- a M X K Matrix of Features/Aligned Basis/Embeddings on Target Shape with N Points and
+(2.) KTar -- a N X K Matrix of Features/Aligned Basis/Embeddings on Target Shape with N Points and
 K Features
 (3.) iter -- number of matrix scaling iterations desired (~ 10-50)
 
