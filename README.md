@@ -43,7 +43,7 @@ desired. Choose 'sparse' for fastest mode
   - A comparison to pointwise functional-map conversion, by converting a ground truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions necessary to establish a pointwise correspondence). 
 <img src="Figures/SinkvsNN.png" width="600" height="450">
   
-  - Comparing the original and *Sinkhornized* versions of **ICP** and **Zoomout** refinement algorithms. We show the geodesic-error curves and also visualize the ground-truth error map like this:
+  - Comparing the original and *Sinkhornized* versions of **ICP** and **Zoomout** refinement algorithms. We show the geodesic-error curves and also visualize the ground-truth error map:
    <img src="Figures/ICP_ZM_errors.png" width="550" height="800">
  
 
