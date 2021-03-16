@@ -56,13 +56,9 @@ for i = 1:length(numbasis)
     func_metrics_sinkhorn = measure_functional_metrics(S1,S2,sinkhorn12);
     
     errs_nn(i) = geo_metrics_nn.gt_error; errs_sinkhorn(i) = geo_metrics_sinkhorn.gt_error;
-    
     bijectivity_nn(i) = geo_metrics_nn.bijectivity; bijectivity_sinkhorn(i) = geo_metrics_sinkhorn.bijectivity;
-    
     smoothness_nn(i) = geo_metrics_nn.smoothness; smoothness_sinkhorn(i) = geo_metrics_sinkhorn.smoothness;
-    
     coverage_nn(i) = geo_metrics_nn.coverage; coverage_sinkhorn(i) = geo_metrics_sinkhorn.coverage;
-
     chamfer_nn(i) = func_metrics_nn.chamfer; chamfer_sinkhorn(i) = func_metrics_sinkhorn.chamfer;
 
 end
@@ -132,11 +128,13 @@ disp('Compare between Original and Sinkhornized versions of ICP and Zoomout....'
 
 ini = dlmread('Man0_Man1.map'); % Initial Noisy Map 
 
+%% ICP
 numIter = 5;
 [map_icp_nn,~] = icp_refine(S1.evecs, S2.evecs, ini, numIter, 'nn');
 [map_icp_sinkhorn,~] = icp_refine(S1.evecs, S2.evecs, ini, numIter, 'sinkhorn');
 disp('icp done ...');
 
+%% Zoomout
 [map_zoomout_nn,~] = zoomout_refine(S1.evecs, S2.evecs, ini, numIter, 'nn');
 [map_zoomout_sinkhorn,~] = zoomout_refine(S1.evecs, S2.evecs, ini, numIter, 'sinkhorn');
 disp('zoomout done ...');
@@ -166,7 +164,7 @@ xlabel('Distance error threshold','FontSize',fs);
 ylabel('Fraction of correspondences','FontSize',fs);
 title('Point-to-point map reconstruction error','FontSize',fs);
 legend(' Initial',' ICP-NN',' ICP-Sink','Zm-NN','Zm-Sink','FontSize',fs);
-axis([0 0.1 0 1]); %axis vis3d;
+axis([0 0.1 0 1]); 
 
 %% Visualize Errors
 

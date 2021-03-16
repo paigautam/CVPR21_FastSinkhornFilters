@@ -23,7 +23,7 @@ An options struct with the following
 (3.) distmax -- factor for choosing lambda, default value 200 as per https://marcocuturi.net/SI.html
 (4.) maxiter -- number of sinkhorn iterations desired
 (5.) kernel_type -- 'full' or 'sparse' depending on nature of kernel
-desired. Choose 'sparse' for fastest mode
+desired. Choose 'sparse' for faster mode. 
 
 ***Additional Comments*** 
 
