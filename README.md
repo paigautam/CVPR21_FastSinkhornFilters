@@ -3,6 +3,7 @@
 This is a sample demo-code for Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps from CVPR 2021. 
 
 ![Alt text](Figures/Teaser_Sinkhorn.png?raw=true)
+## Main Functions
 
 ```
 [S,T12,T21] = fast_sinkhorn_filter(KTar,KSrc,options)
@@ -10,9 +11,9 @@ This is a sample demo-code for Fast Sinkhorn Filters - Using Matrix Scaling for 
 %{
 ***Input***
 
-(1.) KSrc -- a N X K Matrix of Features/Aligned Basis/Embeddings on Source Shape with M Points and
+(1.) KSrc -- a M X K Matrix of Features/Aligned Basis/Embeddings on Source Shape with M Points and
 K Features
-(2.) KTar -- a M X K Matrix of Features/Aligned Basis/Embeddings on Target Shape with N Points and
+(2.) KTar -- a N X K Matrix of Features/Aligned Basis/Embeddings on Target Shape with N Points and
 K Features
 (3.) iter -- number of matrix scaling iterations desired (~ 10-50)
 
@@ -37,7 +38,13 @@ desired. Choose 'sparse' for fastest mode
 
 ## Comments
 
-- The script demo.m runs the sinkhorn filter with 2 experiments
-  - this 
+The script demo.m runs the Fast Sinkhorn Filter with 2 experiments
+
+  - A comparison to pointwise functional-map conversion, by converting a ground truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions necessary to establish a pointwise correspondence). 
+<img src="Figures/SinkvsNN.png" width="600" height="450">
+  
+  - Comparing the original and *Sinkhornized* versions of **ICP** and **Zoomout** refinement algorithms. We show the geodesic-error curves and also visualize the ground-truth error map:
+   <img src="Figures/ICP_ZM_errors.png" width="550" height="800">
+ 
 
 
