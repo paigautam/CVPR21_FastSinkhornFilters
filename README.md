@@ -38,7 +38,7 @@ k-nearest neighbor implementation for improved performance
 
 ## Comments
 
-The script demo.m runs the Fast Sinkhorn Filter with 2 experiments
+The script demo.m runs the Fast Sinkhorn Filter with 2 experiments [GitHub](http://github.com)
 
   - A pointwise conversion using a ground-truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions in order to establish a pointwise correspondence from a functional representation) using the nearest neighbor and the proposed fast sinkhorn filter. We evaluate various geometric and functional metrics like: gt-error, bijectivity, spectral chamfer distance etc. as a function of the spectral basis size.
 <img src="Figures/metrics_fmap_conversion.png" width="900" height="700">
