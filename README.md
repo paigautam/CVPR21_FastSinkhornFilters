@@ -41,10 +41,10 @@ desired. Choose 'sparse' for fastest mode
 The script demo.m runs the Fast Sinkhorn Filter with 2 experiments
 
   - A comparison to pointwise functional-map conversion, by converting a ground truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions necessary to establish a pointwise correspondence). 
-<img src="Figures/SinkvsNN.png" width="600" height="450">
+<img src="Figures/metrics_fmap_conversion.png" width="600" height="450">
   
   - Comparing the original and *Sinkhornized* versions of **ICP** and **Zoomout** refinement algorithms. We show the geodesic-error curves and also visualize the ground-truth error map:
-   <img src="Figures/metrics_fmap_conversion.png" width="550" height="800">
+   <img src="Figures/ICP_ZM_errors.png" width="550" height="800">
  
 
 
