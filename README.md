@@ -1,6 +1,6 @@
 # Fast-Sinkhorn-Filters
 
-This is a sample demo-code for Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps from CVPR 2021. 
+This is a sample demo-code for our CVPR 2021 paper: Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps, by [Maks Ovsjanikov](http://www.lix.polytechnique.fr/~maks/), [Gautam Pai](https://sites.google.com/view/paigautam/home), [Jing Ren](https://ren-jing.com/), [Peter Wonka](http://peterwonka.net/), and [Simone Melzi](https://sites.google.com/site/melzismn/). 
 
 ![Alt text](Figures/Teaser_Sinkhorn.png?raw=true)
 ## Main Functions
@@ -38,13 +38,16 @@ k-nearest neighbor implementation for improved performance
 
 ## Comments
 
-The script demo.m runs the Fast Sinkhorn Filter with 2 experiments 
-
-  - A pointwise conversion using a ground-truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions in order to establish a pointwise correspondence from a functional representation) using the nearest neighbor and the proposed fast sinkhorn filter. We evaluate various geometric and functional metrics like: gt-error, bijectivity, spectral chamfer distance etc. as a function of the spectral basis size.
-<img src="Figures/metrics_fmap_conversion.png" width="900" height="700">
+The script ```demo.m``` runs our Fast Sinkhorn Filter with 2 experiments:
   
-  - Comparing the original and *Sinkhornized* versions of **ICP** and [**Zoomout**](https://github.com/llorz/SGA19_zoomOut) refinement algorithms. We show the ground truth error curves and also visualize the error map on ths source surface:
-   <img src="Figures/ICP_ZM_errors.png" width="550" height="800">
+ 1. A pointwise conversion using a ground-truth *Adjoint Map* operator (which we prove in the paper to be optimal for transferring delta functions in order to establish a pointwise correspondence from a functional representation) using the nearest neighbor and the proposed fast sinkhorn filter. We evaluate various geometric and functional metrics like: gt-error, bijectivity, spectral chamfer distance etc. as a function of the spectral basis size.
+<img src="Figures/metric.png" width="900">
+  
+ 2. Comparing the original and *Sinkhornized* versions of **ICP** and [**Zoomout**](https://github.com/llorz/SGA19_zoomOut) refinement algorithms. We show the ground truth error curves and also visualize the error map on ths source surface:
+   <img src="Figures/map_err.png" width="900">
  
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/). For any commercial uses or derivatives, please contact us (gautamppai89@gmail.com, jing.ren@kaust.edu.sa, melzismn@gmail.com , peter.wonka@kaust.edu.sa, maks@lix.polytechnique.fr).
 
