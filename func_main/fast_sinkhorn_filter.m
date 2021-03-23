@@ -6,7 +6,7 @@
 K Features
 (2.) KTar -- a N X K Matrix of Features/Aligned Basis/Embedding in Target Shape with N Points and
 K Features
-(3.) iter -- number of matrix scaling iterations desired (~ 10-50)
+(3.) (optional) options struct - see below
 
 ***Output*** 
 
@@ -19,10 +19,10 @@ K Features
 An options struct with the following
 
 (1.) p -- (power of the distance for assignment matrix) - default set to 1
-(2.) knn -- number of nearest neighbors for sparsifying kernel
-(3.) distmax -- factor for choosing lambda, default value 200 as per https://marcocuturi.net/SI.html
-(4.) maxiter -- number of sinkhorn iterations desired
-(5.) kernel_type -- 'full' or 'sparse' depending on nature of kernel
+(2.) knn -- number of nearest neighbors for sparsifying kernel - default set to 50
+(3.) distmax -- factor for choosing lambda, default value 500 as per https://marcocuturi.net/SI.html
+(4.) maxiter -- number of matrix scaling iterations desired (~ 10-50)
+(5.) kernel_type -- 'full' or 'sparse' (default) depending on nature of kernel
 desired. Choose 'sparse' for faster mode. 
 
 ***Additional Comments*** 
