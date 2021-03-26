@@ -1,6 +1,6 @@
 # Fast-Sinkhorn-Filters
 
-This is a sample demo-code for our CVPR 2021 paper: Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps, by [Maks Ovsjanikov](http://www.lix.polytechnique.fr/~maks/), [Gautam Pai](https://sites.google.com/view/paigautam/home), [Jing Ren](https://ren-jing.com/), [Peter Wonka](http://peterwonka.net/), and [Simone Melzi](https://sites.google.com/site/melzismn/). 
+This is a sample demo-code for our CVPR 2021 paper: Fast Sinkhorn Filters - Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps, by [Gautam Pai](https://sites.google.com/view/paigautam/home), [Jing Ren](https://ren-jing.com/), [Simone Melzi](https://sites.google.com/site/melzismn/), [Peter Wonka](http://peterwonka.net/) and [Maks Ovsjanikov](http://www.lix.polytechnique.fr/~maks/)
 
 ![Alt text](Figures/Teaser_Sinkhorn.png?raw=true)
 ## Main Functions
